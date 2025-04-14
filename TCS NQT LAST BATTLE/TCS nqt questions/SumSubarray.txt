@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Main {
+    // Function to find the first subarray with the given sum S
+    public static void sumArray(int arr[], int N, int S) {
+        for (int i = 0; i < N; i++) {
+            int curSum = 0;
+            for (int j = i; j < N; j++) {
+                curSum += arr[j];
+                if (curSum == S) {
+                    System.out.println((i + 1) + " " + (j + 1)); // 1-based index output
+                    return;
+                }
+                if (curSum > S) {
+                    break;
+                }
+            }
+        }
+        System.out.println("-1"); // No subarray found
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt(); // Number of test cases
+
+        for (int i = 0; i < T; i++) {
+            int N = sc.nextInt(); // Array size
+            int S = sc.nextInt(); // Required sum
+            int arr[] = new int[N];
+            
+            for (int j = 0; j < N; j++) {
+                arr[j] = sc.nextInt();  
+            }
+            
+            sumArray(arr, N, S);
+        }
+        sc.close();
+    }
+}

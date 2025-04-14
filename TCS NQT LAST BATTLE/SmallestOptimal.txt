@@ -1,0 +1,24 @@
+import java.util.*;
+public class SmallestOptimal{
+public static int SmallestEle(int[]arr){
+int s= arr[0];
+for(int i=1;i<arr.length;i++){
+	if(arr[i]<s){
+		s=arr[i];
+	}
+	}
+		return s;
+}
+	
+public static void main(String args[]){
+	Scanner sc=new scanner(System.in);
+	int n= sc.nextInt();
+	int arr[]=new int[n];
+	System.out.println("The given array is: ");
+	for(int i =0;i<n;i++){
+		arr[i]=sc.nextInt();	
+	}
+	int x =SmallestEle(int[]arr);
+	System.out.prinln("Smallest elements:"+x);
+}
+}

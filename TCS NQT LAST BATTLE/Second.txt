@@ -1,0 +1,54 @@
+import java.util.*;
+public class Second{
+public static int SecondSmallest(int arr[]){
+
+	int n=arr.length;
+	if(n<2){
+		return -1;
+
+	}
+	int min=Integer.MAX_VALUE;
+	int min2 = Integer.MAX_VALUE;
+	for(int i =0;i<n;i++){
+		if(arr[i]<min){
+			min_2=min;
+			min=arr[i[;
+		}
+		else if(arr[i]<min_2 && arr[i]!=min)
+		{
+			min_2=arr[i];
+		}
+	}
+	return min_2;
+	
+public static int Secondlargest(int arr[]){
+	int n=arr.length;
+	if(n<2){
+		return -1;
+
+	}	
+	int max= Integer.MIN_VALUE;
+	int max2= Integer.MIN_VALUE;
+	for(int i=0;i<n;i++){
+		if(arr[i]>max){
+			max_2=max;
+			max=arr[i];
+		}
+		elif(arr[i]>max_2 && arr[i]!=max){
+			max_2=arr[i];
+		}
+	}
+	return max_2;
+}
+public static void main(String args[]){
+	Scanner sc =new Scanner(System.in);
+	int n= sc.nextInt();
+	int arr[]=new int[n];
+	for(int i =0;i<n;i++){
+		arr[i]=sc.nextInt();
+	}
+	System.out.println("Second Smallest: "+ SecondSmallest(arr));
+	System.out.println("Second Smallest: "+ Secondlargest(arr));
+	
+}
+}
